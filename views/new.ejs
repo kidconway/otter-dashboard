@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="/new.css">
+</head>
+
+<body>
+  <div id="header">
+    <h1 class="title">Add your favorite Otter</h1>
+  </div>
+  <div id="main">
+    <div class="form-style-5">
+      <form action="/otters" method="post">
+        <ul class="form-style-1">
+          <li><label>Full Name <span class="required">*</span></label><input type="text" name="fname" class="field-divided" value=' <%= otter.house =>' />&nbsp;<input type="text" name="lname" class="field-divided" value=' <%= otter.house =>' /></li>
+          <li>
+            <label>Age <span class="required">*</span></label>
+            <input type="text" name="age" class="field-long" value=' <%= otter.house =>'/>
+          </li>
+          <li>
+            <label>Weight <span class="required">*</span></label>
+            <input type="text" name="weight" class="field-long" value=' <%= otter.house =>'/>
+          </li>
+          <li>
+            <label>Length <span class="required">*</span></label>
+            <input type="text" name="length" class="field-long" value=' <%= otter.house =>'/>
+          </li>
+          <li>
+            <label>What House does it belong to? <span class="required">*</span></label>
+            <select name="house" class="field-select" value=' <%= otter.house =>'>
+              <option value="Stark">Stark of Winterfell</option>
+              <option value="Tully">Tully of Riverrun</option>
+              <option value="Arryn">Arryn of the Eyrie</option>
+              <option value="Lannister">Lannister of Casterly Rock</option>
+              <option value="Baratheon">Baratheon of Storm's End</option>
+              <option value="Tyrell">Tyrell of Highgarden</option>
+              <option value="Martell">Martell of Sunspear</option>
+              <option value="Greyjoy">Greyjoy of Pyke</option>
+            </select>
+          </li>
+          <li>
+            <input type="submit" value="Add Otter">
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

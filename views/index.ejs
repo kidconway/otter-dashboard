@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div id="header">
+      <h1 class="title">Welcome to the Hall of Otters</h1>
+    </div>
+    <div id="main">
+      <div class="navigation">
+        <form action="/otters/new" method="get">
+          <input type="submit" value="Add an Otter">
+        </form>
+      </div>
+      <h3>Meet the Otters</h3>
+      <% for (x in otters) { %>
+        <h4> <%= otters[x].fname %> <%= otters[x].lname %> </h4>
+        <ul>
+          <li>Age: <%= otters[x].age %> </li>
+          <li>Weight: <%= otters[x].weight %> </li>
+          <li>Length: <%= otters[x].length %> </li>
+          <li>House <%= otters[x].house %> </li>
+        </ul>
+        <form action="/otters/edit/<%= otters[x]._id %>" method="get">
+          <input type="submit" value="Edit Otter">
+        </form>
+        <form action="/otters/destroy/<%= otters[x]._id %>" method="post">
+          <input type="submit" value="Delete Otter">
+        </form>
+      <% } %>
+
+    </div>
+  </body>
+</html>

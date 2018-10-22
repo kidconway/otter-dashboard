@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Update an Otter</title>
+    <link rel="stylesheet" href="/update.css">
+  </head>
+  <body>
+    <div id="header">
+
+    </div>
+    <div id="main">
+      <form action="/otters/<%= otter._id %>" method="post">
+        <ul class="form-style-1">
+          <li><label>Currently: <%= otter.fname %>  <%= otter.lname %> <span class="required">*</span></label><input type="text" name="fname" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="lname" class="field-divided" placeholder="Last" /></li>
+          <li>
+            <label>Currently: <%= otter.age %> years old <span class="required">*</span></label>
+            <input type="text" name="age" class="field-long" />
+          </li>
+          <li>
+            <label>Currently: <%= otter.weight %>lbs <span class="required">*</span></label>
+            <input type="text" name="weight" class="field-long" />
+          </li>
+          <li>
+            <label>Currently: <%= otter.length %> inches <span class="required">*</span></label>
+            <input type="text" name="length" class="field-long" />
+          </li>
+          <li>
+            <label>Currently: House <%= otter.house %> <span class="required">*</span></label>
+            <select name="house" class="field-select">
+              <option value="Stark of Winterfell">Stark of Winterfell</option>
+              <option value="Tully of Riverrun">Tully of Riverrun</option>
+              <option value="Arryn of the Eyrie">Arryn of the Eyrie</option>
+              <option value="Lannister of Casterly Rock">Lannister of Casterly Rock</option>
+              <option value="Baratheon of Storm's End">Baratheon of Storm's End</option>
+              <option value="Tyrell of Highgarden">Tyrell of Highgarden</option>
+              <option value="Martell of Sunspear">Martell of Sunspear</option>
+              <option value="Greyjoy of Pyke">Greyjoy of Pyke</option>
+            </select>
+          </li>
+          <li>
+            <input type="submit" value="Update Otter">
+          </li>
+        </ul>
+      </form>
+      <form action="/" method="get">
+        <input type="submit" name="back" value="Go Back">
+      </form>
+    </div>
+
+
+
+  </body>
+</html>
