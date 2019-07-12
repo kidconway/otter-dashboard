@@ -10,7 +10,13 @@ const validate = require('mongoose-validator')
 app.use(bodyParser.urlencoded({ extended: true}))
 app.use(express.static(path.join(__dirname, './static')))
 
-app.use(session({secret: 'keyboardkitteh', name: 'session_id', saveUninitialized: true, cookie: {maxAge: 60000}}))
+app.use(session({
+  secret: 'keyboardkitteh',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}))
+
 app.use(flash())
 
 app.set('views', path.join(__dirname, './views'))
